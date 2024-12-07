@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Leaflet Map with Train Lines</title>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+    <style>
+        html, body {
+            height: 100%;
+            margin: 0;
+        }
+        #map {
+            height: 100%;
+        }
+        #radius-control {
+            position: absolute;
+            bottom: 10px;
+            right: 10px;
+            background: white;
+            padding: 10px;
+            border-radius: 5px;
+            box-shadow: 0 0 5px rgba(0,0,0,0.3);
+            z-index: 1000; /* Ensure the control is above the map */
+        }
+    </style>
+</head>
+<body>
+    <div id="map"></div>
+    <div id="radius-control">
+        <label for="radius-input">Radius (meters):</label>
+        <input type="number" id="radius-input" value="100" min="10" max="1000" step="10" oninput="updateRadius()">
+    </div>
+    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+    <script>
+        // Initialize the map
+        var map = L.map('map').setView([0, 0], 2); // Set initial view
+
+        // Add CartoDB PositronNoLabels tiles
+        var baseLayer = L.tileLayer('https://{s}.basemaps.cartocdn.com/rastertiles/light_nolabels/{z}/{x}/{y}{r}.png', {
+            attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors &copy; <a href="https://carto.com/attributions">CARTO</a>'
+        }).addTo(map);
+
+        // Object to hold the layers
+        var layers = {
+            'Area of Interest': L.layerGroup().addTo(map),
+            'Train': L.layerGroup().addTo(map),
+            'Metro': L.layerGroup().addTo(map),
+            'Light Rail': L.layerGroup().addTo(map),
+            'Tram': L.layerGroup().addTo(map)
+        };
+
+        // Function to load GeoJSON data
+        function loadGeoJSON(url) {
+            return fetch(url)
+                .then(response => response.json())
+                .catch(error => {
+                    console.error('Error loading the GeoJSON data:', error);
+                    return null;
+                });
+        }
+
+        // Function to visualize GeoJSON data
+        function visualizeGeoJSON(data, color, fitBounds = false, isPoint = false, layerGroup) {
+            if (!data) return;
+
+            var layer = L.geoJSON(data, {
+                style: function () {
+                    return { color: color };
+                },
+                pointToLayer: function (feature, latlng) {
+                    return isPoint ? L.marker(latlng, { icon: L.divIcon({ className: 'custom-icon', html: `<div style="background-color: ${color}; width: 8px; height: 8px; border-radius: 50%;"></div>` }) }) : L.marker(latlng);
+                }
+            });
+
+            layerGroup.addLayer(layer);
+
+            if (fitBounds) {
+                map.fitBounds(layer.getBounds());
+            }
+
+            // Add layer to map
+            layer.addTo(map);
+        }
+
+        // Initialize layer control
+        var layerControl = L.control.layers(null, {
+            '<span style="display: inline-block; width: 12px; height: 12px; background-color: black;"></span> Area of Interest': layers['Area of Interest'],
+            '<span style="display: inline-block; width: 12px; height: 12px; background-color: red;"></span> Train': layers['Train'],
+            '<span style="display: inline-block; width: 12px; height: 12px; background-color: purple;"></span> Metro': layers['Metro'],
+            '<span style="display: inline-block; width: 12px; height: 12px; background-color: green;"></span> Light Rail': layers['Light Rail'],
+            '<span style="display: inline-block; width: 12px; height: 12px; background-color: orange;"></span> Tram': layers['Tram']
+        }).addTo(map);
+
+        // Load and visualize different GeoJSON files with specified colors
+        loadGeoJSON('assets/aoi.geojson').then(data => visualizeGeoJSON(data, 'black', true, false, layers['Area of Interest'])); // Fit map to AOI
+        loadGeoJSON('assets/train_lines.geojson').then(data => visualizeGeoJSON(data, 'red', false, false, layers['Train']));
+        loadGeoJSON('assets/metro_lines.geojson').then(data => visualizeGeoJSON(data, 'blue', false, false, layers['Metro']));
+        loadGeoJSON('assets/light_rail_lines.geojson').then(data => visualizeGeoJSON(data, 'green', false, false, layers['Light Rail']));
+        loadGeoJSON('assets/tram_lines.geojson').then(data => visualizeGeoJSON(data, 'orange', false, false, layers['Tram']));
+
+        // Load and visualize station points with specified colors
+        loadGeoJSON('assets/train_stations.geojson').then(data => visualizeGeoJSON(data, 'darkred', false, true, layers['Train']));
+        loadGeoJSON('assets/metro_stations.geojson').then(data => visualizeGeoJSON(data, 'darkblue', false, true, layers['Metro']));
+        loadGeoJSON('assets/light_rail_stations.geojson').then(data => visualizeGeoJSON(data, 'darkgreen', false, true, layers['Light Rail']));
+        loadGeoJSON('assets/tram_stations.geojson').then(data => visualizeGeoJSON(data, 'darkorange', false, true, layers['Tram']));
+
+        var currentLocationMarker;
+        var currentLocationCircle;
+
+        // Function to update current location
+        function updateCurrentLocation() {
+            if (navigator.geolocation) {
+                navigator.geolocation.watchPosition(position => {
+                    var lat = position.coords.latitude;
+                    var lng = position.coords.longitude;
+                    var radius = document.getElementById('radius-input').value;
+
+                    if (currentLocationMarker) {
+                        map.removeLayer(currentLocationMarker);
+                    }
+                    if (currentLocationCircle) {
+                        map.removeLayer(currentLocationCircle);
+                    }
+
+                    currentLocationMarker = L.marker([lat, lng], {
+                        icon: L.divIcon({ className: 'current-location-icon', html: '<div style="background-color: teal; width: 12px; height: 12px; border-radius: 50%;"></div>' })
+                    }).addTo(map);
+                    currentLocationCircle = L.circle([lat, lng], {
+                        color: 'teal',
+                        fillColor: 'teal',
+                        fillOpacity: 0.2,
+                        radius: radius
+                    }).addTo(map);
+                    
+                    map.setView([lat, lng], 14);
+                }, error => {
+                    console.error('Error getting current location:', error);
+                });
+            } else {
+                console.error('Geolocation is not supported by this browser.');
+            }
+        }
+
+        // Function to update radius
+        function updateRadius() {
+            if (currentLocationCircle) {
+                var radius = document.getElementById('radius-input').value;
+                currentLocationCircle.setRadius(radius);
+            }
+        }
+
+        // Update current location on load
+        updateCurrentLocation();
+    </script>
+</body>
+</html>
