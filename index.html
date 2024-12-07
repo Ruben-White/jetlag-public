@@ -117,22 +117,24 @@
                     var radius = document.getElementById('radius-input').value;
 
                     if (currentLocationMarker) {
-                        map.removeLayer(currentLocationMarker);
-                    }
-                    if (currentLocationCircle) {
-                        map.removeLayer(currentLocationCircle);
+                        currentLocationMarker.setLatLng([lat, lng]);
+                    } else {
+                        currentLocationMarker = L.marker([lat, lng], {
+                            icon: L.divIcon({ className: 'current-location-icon', html: '<div style="background-color: teal; width: 12px; height: 12px; border-radius: 50%;"></div>' })
+                        }).addTo(map);
                     }
 
-                    currentLocationMarker = L.marker([lat, lng], {
-                        icon: L.divIcon({ className: 'current-location-icon', html: '<div style="background-color: teal; width: 12px; height: 12px; border-radius: 50%;"></div>' })
-                    }).addTo(map);
-                    currentLocationCircle = L.circle([lat, lng], {
-                        color: 'teal',
-                        fillColor: 'teal',
-                        fillOpacity: 0.2,
-                        radius: radius
-                    }).addTo(map);
-                    
+                    if (currentLocationCircle) {
+                        currentLocationCircle.setLatLng([lat, lng]);
+                        currentLocationCircle.setRadius(radius);
+                    } else {
+                        currentLocationCircle = L.circle([lat, lng], {
+                            color: 'teal',
+                            fillColor: 'teal',
+                            fillOpacity: 0.2,
+                            radius: radius
+                        }).addTo(map);
+                    }
                 }, error => {
                     console.error('Error getting current location:', error);
                 });
