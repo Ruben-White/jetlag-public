@@ -1,6 +1,6 @@
 {
 "type": "FeatureCollection",
-"name": "light_rail_stations",
+"name": "map_light_rail_stations",
 "crs": { "type": "name", "properties": { "name": "urn:ogc:def:crs:OGC:1.3:CRS84" } },
 "features": [
 { "type": "Feature", "properties": { "name": "Berkel Westpolder" }, "geometry": { "type": "Point", "coordinates": [ 4.4543595, 51.9900765 ] } },
@@ -18,6 +18,8 @@
 { "type": "Feature", "properties": { "name": "Prinsenlaan" }, "geometry": { "type": "Point", "coordinates": [ 4.5565395, 51.9407693 ] } },
 { "type": "Feature", "properties": { "name": "Romeynshof" }, "geometry": { "type": "Point", "coordinates": [ 4.5428712, 51.9615094 ] } },
 { "type": "Feature", "properties": { "name": "Schenkel" }, "geometry": { "type": "Point", "coordinates": [ 4.5634734, 51.9319373 ] } },
+{ "type": "Feature", "properties": { "name": "Vlaardingen Oost" }, "geometry": { "type": "Point", "coordinates": [ 4.361647, 51.9101567 ] } },
+{ "type": "Feature", "properties": { "name": "Vlaardingen Centrum" }, "geometry": { "type": "Point", "coordinates": [ 4.3438134, 51.9031357 ] } },
 { "type": "Feature", "properties": { "name": "Schiedam Nieuwland" }, "geometry": { "type": "Point", "coordinates": [ 4.383435, 51.9227659 ] } },
 { "type": "Feature", "properties": { "name": "Alexander" }, "geometry": { "type": "Point", "coordinates": [ 4.5519103, 51.9514281 ] } }
 ]
