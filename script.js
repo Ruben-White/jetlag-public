@@ -588,16 +588,19 @@ function drawCurses(count, popup, overlay) {
     const cursesGrid = document.querySelector('.curses-grid');
     fetch('./assets/cursers.json')
         .then(response => response.json())
-        .then(curses => {
+        .then(categories => {
             for (let i = 0; i < count; i++) {
-                const randomIndex = Math.floor(Math.random() * curses.length);
-                const curse = curses.splice(randomIndex, 1)[0];
+                const randomCategoryIndex = Math.floor(Math.random() * categories.length);
+                const category = categories[randomCategoryIndex];
+                const randomCardIndex = Math.floor(Math.random() * category.cards.length);
+                const curse = category.cards.splice(randomCardIndex, 1)[0];
 
                 const curseElement = document.createElement('div');
                 curseElement.classList.add('curse');
                 curseElement.dataset.name = curse.name;
                 curseElement.dataset.description = curse.description;
                 curseElement.dataset.cost = curse.cost;
+                curseElement.style.backgroundColor = category.color; // Apply category color
 
                 const curseName = document.createElement('span');
                 curseName.classList.add('curse-name');

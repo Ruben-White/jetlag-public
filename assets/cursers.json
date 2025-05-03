@@ -1,7 +1,190 @@
 [
-    {"name": "Curse of the impressionable consumer", "description": "Seekers must enter and gain admission (if applicable) to a location or buy a product that they saw an advertisement for before asking another question.\n\nThis advertisement must be found out in the world, not on a seeker's device, and must be at least 100 feet from the product or location itself.", "cost": "Casting Cost: The seekers' next question is free"},
-    {"name": "Curse of the mediocre travel agent", "description": "Choose any publicly-accessible place within a 250 m of the seekers' current location. They cannot currently be on transit. They must go there, and spend at least 5 minutes there, before asking another question.\n\nThey must procure an object to bring you as a souvenir. If this souvenir is lost before they can give it to you, you are awarded an extra 10 minutes.", "cost": "Casting Cost: Their vacation destination must be further from you than their current location."},
-    {"name": "Curse of the ransom note", "description": "The next question that the seekers ask must be composed of words and letters cut out of any printed material.\n\nThe question must be coherent and include at least 5 words.", "cost": "Casting Cost: Spell out \"curse of the ransom note\" as a ransom note."},
-    {"name": "Curse of the jammed door", "description": "For the next three hours, whenever the seekers want to pass through a doorway into a building, business, train, or other vehicle, they must first roll 2 dice. If they do not roll a 7 or higher, they cannot enter that space (including through other doorways.)\n\nAny given doorway can be re-attempted after 5 minutes.", "cost": "Casting Cost: Discard a card."},
-    {"name": "Curse of the distant cuisine", "description": "Find a restaurant within your zone that explicitly serves food from a specific foreign country.\n\nThe seekers must visit a restaurant serving food from a country that is an equal or greater distance away before asking another question.", "cost": "Casting Cost: You must be at the restaurant."}
+    {"name": "Very short time bonuses", "color": "#D63333", "cards": [
+        {"name": "Very short time bonus", "description": "Add [S2, M3, L5] minutes to the seekers' time.", "cost": ""},
+        {"name": "Very short time bonus", "description": "Add [S2, M3, L5] minutes to the seekers' time.", "cost": ""},
+        {"name": "Very short time bonus", "description": "Add [S2, M3, L5] minutes to the seekers' time.", "cost": ""},
+        {"name": "Very short time bonus", "description": "Add [S2, M3, L5] minutes to the seekers' time.", "cost": ""},
+        {"name": "Very short time bonus", "description": "Add [S2, M3, L5] minutes to the seekers' time.", "cost": ""},
+        {"name": "Very short time bonus", "description": "Add [S2, M3, L5] minutes to the seekers' time.", "cost": ""},
+        {"name": "Very short time bonus", "description": "Add [S2, M3, L5] minutes to the seekers' time.", "cost": ""},
+        {"name": "Very short time bonus", "description": "Add [S2, M3, L5] minutes to the seekers' time.", "cost": ""},
+        {"name": "Very short time bonus", "description": "Add [S2, M3, L5] minutes to the seekers' time.", "cost": ""},
+        {"name": "Very short time bonus", "description": "Add [S2, M3, L5] minutes to the seekers' time.", "cost": ""},
+        {"name": "Very short time bonus", "description": "Add [S2, M3, L5] minutes to the seekers' time.", "cost": ""},
+        {"name": "Very short time bonus", "description": "Add [S2, M3, L5] minutes to the seekers' time.", "cost": ""},
+        {"name": "Very short time bonus", "description": "Add [S2, M3, L5] minutes to the seekers' time.", "cost": ""},
+        {"name": "Very short time bonus", "description": "Add [S2, M3, L5] minutes to the seekers' time.", "cost": ""},
+        {"name": "Very short time bonus", "description": "Add [S2, M3, L5] minutes to the seekers' time.", "cost": ""},
+        {"name": "Very short time bonus", "description": "Add [S2, M3, L5] minutes to the seekers' time.", "cost": ""},
+        {"name": "Very short time bonus", "description": "Add [S2, M3, L5] minutes to the seekers' time.", "cost": ""},
+        {"name": "Very short time bonus", "description": "Add [S2, M3, L5] minutes to the seekers' time.", "cost": ""},
+        {"name": "Very short time bonus", "description": "Add [S2, M3, L5] minutes to the seekers' time.", "cost": ""},
+        {"name": "Very short time bonus", "description": "Add [S2, M3, L5] minutes to the seekers' time.", "cost": ""},
+        {"name": "Very short time bonus", "description": "Add [S2, M3, L5] minutes to the seekers' time.", "cost": ""},
+        {"name": "Very short time bonus", "description": "Add [S2, M3, L5] minutes to the seekers' time.", "cost": ""},
+        {"name": "Very short time bonus", "description": "Add [S2, M3, L5] minutes to the seekers' time.", "cost": ""},
+        {"name": "Very short time bonus", "description": "Add [S2, M3, L5] minutes to the seekers' time.", "cost": ""},
+        {"name": "Very short time bonus", "description": "Add [S2, M3, L5] minutes to the seekers' time.", "cost": ""}
+    ]},
+    {"name": "Short time bonuses", "color": "#E47A3E", "cards": [
+        {"name": "Short time bonus", "description": "Add [S4, M6, L10] minutes to the seekers' time.", "cost": ""},
+        {"name": "Short time bonus", "description": "Add [S4, M6, L10] minutes to the seekers' time.", "cost": ""},
+        {"name": "Short time bonus", "description": "Add [S4, M6, L10] minutes to the seekers' time.", "cost": ""},
+        {"name": "Short time bonus", "description": "Add [S4, M6, L10] minutes to the seekers' time.", "cost": ""},
+        {"name": "Short time bonus", "description": "Add [S4, M6, L10] minutes to the seekers' time.", "cost": ""},
+        {"name": "Short time bonus", "description": "Add [S4, M6, L10] minutes to the seekers' time.", "cost": ""},
+        {"name": "Short time bonus", "description": "Add [S4, M6, L10] minutes to the seekers' time.", "cost": ""},
+        {"name": "Short time bonus", "description": "Add [S4, M6, L10] minutes to the seekers' time.", "cost": ""},
+        {"name": "Short time bonus", "description": "Add [S4, M6, L10] minutes to the seekers' time.", "cost": ""},
+        {"name": "Short time bonus", "description": "Add [S4, M6, L10] minutes to the seekers' time.", "cost": ""},
+        {"name": "Short time bonus", "description": "Add [S4, M6, L10] minutes to the seekers' time.", "cost": ""},
+        {"name": "Short time bonus", "description": "Add [S4, M6, L10] minutes to the seekers' time.", "cost": ""},
+        {"name": "Short time bonus", "description": "Add [S4, M6, L10] minutes to the seekers' time.", "cost": ""},
+        {"name": "Short time bonus", "description": "Add [S4, M6, L10] minutes to the seekers' time.", "cost": ""},
+        {"name": "Short time bonus", "description": "Add [S4, M6, L10] minutes to the seekers' time.", "cost": ""}
+    ]},
+    {"name": "Medium time bonuses", "color": "#FFD447", "cards": [
+        {"name": "Medium time bonus", "description": "Add [S6, M9, L15] minutes to the seekers' time.", "cost": ""},
+        {"name": "Medium time bonus", "description": "Add [S6, M9, L15] minutes to the seekers' time.", "cost": ""},
+        {"name": "Medium time bonus", "description": "Add [S6, M9, L15] minutes to the seekers' time.", "cost": ""},
+        {"name": "Medium time bonus", "description": "Add [S6, M9, L15] minutes to the seekers' time.", "cost": ""},
+        {"name": "Medium time bonus", "description": "Add [S6, M9, L15] minutes to the seekers' time.", "cost": ""},
+        {"name": "Medium time bonus", "description": "Add [S6, M9, L15] minutes to the seekers' time.", "cost": ""},
+        {"name": "Medium time bonus", "description": "Add [S6, M9, L15] minutes to the seekers' time.", "cost": ""},
+        {"name": "Medium time bonus", "description": "Add [S6, M9, L15] minutes to the seekers' time.", "cost": ""},
+        {"name": "Medium time bonus", "description": "Add [S6, M9, L15] minutes to the seekers' time.", "cost": ""},
+        {"name": "Medium time bonus", "description": "Add [S6, M9, L15] minutes to the seekers' time.", "cost": ""}
+
+    ]},
+    {"name": "Long time bonuses", "color": "#4FB26D", "cards": [
+        {"name": "Long time bonus", "description": "Add [S8, M12, L20] minutes to the seekers' time.", "cost": ""},
+        {"name": "Long time bonus", "description": "Add [S8, M12, L20] minutes to the seekers' time.", "cost": ""},
+        {"name": "Long time bonus", "description": "Add [S8, M12, L20] minutes to the seekers' time.", "cost": ""}
+    ]},
+    {"name": "Very long time bonuses", "color": "#5665EB", "cards": [
+        {"name": "Very long time bonus", "description": "Add [S12, M18, L30] minutes to the seekers' time.", "cost": ""},
+        {"name": "Very long time bonus", "description": "Add [S12, M18, L30] minutes to the seekers' time.", "cost": ""}
+    ]},
+    {"name": "Curses", "color": "#8C4FB0", "cards": [
+        {
+            "name": "Curse of The Zoologist",
+            "description": "Take a photo of a wild fish, bird, mammal, reptile, amphibian, or bug. The seeker must take a picture of a wild animal in the same category before asking another question.",
+            "cost": "A photo of an animal."
+        },
+        {
+            "name": "Curse Of The Unguided Tourist",
+            "description": "Send the seekers an unzoomed Google Street View image from a street within 500 feet of where they are now. The shot has to be parallel to the horizon and include at least one human-built structure other than a road. Without using the internet for research, they must find what you sent them in real life before they can use transportation or ask another question. They must send a picture to the hider for verification.",
+            "cost": "Seeker must be outside."
+        },
+        {
+            "name": "Curse Of The Endless Tumble",
+            "description": "Seekers must roll a die at least 100 feet and have it land on a 5 or a 6 before they can ask another question. The die must roll the full distance, unaided, using only the momentum from the initial throw and gravity. If the seekers accidentally hit someone with the die, the hider is awarded a [S10, M20, L30] minute bonus.",
+            "cost": "Roll a die. If it's 5 or 6 this card has no effect."
+        },
+        {
+            "name": "Curse Of The Hidden Hangman",
+            "description": "Before asking another question or boarding another form of transportation, seekers must be the hider in a game of Hamna.",
+            "cost": "Discard 2 cards."
+        },
+        {
+            "name": "Curse Of The Overflowing Chalice",
+            "description": "For the next three questions, you may draw (not keep) an additional card when drawing from the hider deck.",
+            "cost": "Discard a card."
+        },
+        {
+            "name": "Curse Of The Mediocre Travel Agent",
+            "description": "Choose any publicly-accessible place within [S0.25, M0.25, L0.50] miles of the seekers' current location. They cannot currently be on transit. They must go there and spend at least S5 M5 L10 minutes before asking another question. They must send you at least three photos of them enjoying their vacation and procure a souvenir. If this souvenir is lost before they get to you, you are awarded an extra [S30, M45, L60] minutes.",
+            "cost": ""
+        },
+        {
+            "name": "Curse Of The Luxury Car",
+            "description": "Take a photo of a car. The seekers must take a photo of a more expensive car before asking another question.",
+            "cost": "A photo of a car."
+        },
+        {
+            "name": "Curse Of The U-Turn",
+            "description": "The seekers must disembark their current mode of transportation at the next station (as long as that station is served by another form of transit in the next [S0.5, M0.5, L1] hours).",
+            "cost": "Seekers must be heading the wrong way. (Their next station is further from you than they are.)"
+        },
+        {
+            "name": "Curse Of The Bridge Troll",
+            "description": "The seekers must ask their next question from under a bridge.",
+            "cost": "Seekers must be at least [S1, M5, L30] miles from you."
+        },
+        {
+            "name": "Curse Of Water Weight",
+            "description": "The seekers must acquire and carry at least 2 liters of liquid per seeker for the rest of your run. They cannot ask another question until they have acquired the liquid. If the liquid is lost or abandoned, the hider is awarded a [S30, M30, L60] minute bonus.",
+            "cost": "Seekers must be within 1,000ft (300 meters) of a body of water."
+        },
+        {
+            "name": "Curse Of The Jammed Door",
+            "description": "For the next [S0.5, M1, L3] hours, whenever the seekers want to pass through a doorway into a building, business, train, or other vehicle, they must roll 2 dice. If they do not roll a 7 or higher, they cannot enter. Each doorway can be reattempted after [S5, M10, L15] minutes.",
+            "cost": "Discard 2 cards."
+        },
+        {
+            "name": "Curse Of The Cairn",
+            "description": "You have one attempt to stack as many rocks on top of each other as possible in a freestanding tower. Each rock may touch only one other rock. If the tower falls, seekers must build one of equal height. Rocks must be found in nature and dispersed afterward.",
+            "cost": "Build a rock tower."
+        },
+        {
+            "name": "Curse Of The Urban Explorer",
+            "description": "For the rest of the run, seekers cannot ask questions while on transit or in a train station.",
+            "cost": "Discard 2 cards."
+        },
+        {
+            "name": "Curse Of The Impressionable Consumer",
+            "description": "Seekers must enter and gain admission (if applicable) to a location or buy a product they saw in an advertisement at least 100 feet from the product/location itself.",
+            "cost": "The seekers' next question is free."
+        },
+        {
+            "name": "Curse Of The Egg Partner",
+            "description": "Seekers must acquire an egg before asking another question. The egg is now an official team member. If it is cracked or abandoned, the hider is awarded [S30, M45, L60] minutes. This curse cannot be played during the endgame.",
+            "cost": "Discard two cards."
+        },
+        {
+            "name": "Curse Of The Distant Cuisine",
+            "description": "Find a restaurant that serves food from a specific foreign country. The seekers must find one that serves food from a country of equal or greater distance away.",
+            "cost": "You must be at the restaurant."
+        },
+        {
+            "name": "Curse Of The Right Turn",
+            "description": "For the next [S20, M40, L6] minutes, the seekers can only turn right at street intersections. If trapped, they must turn around.",
+            "cost": "Discard a card."
+        },
+        {
+            "name": "Curse Of The Labyrinth",
+            "description": "Spend up to [S10, M20, L30] minutes drawing a solvable maze and send a photo of it to the seekers. They must solve it before asking another question.",
+            "cost": "Draw a maze."
+        },
+        {
+            "name": "Curse Of The Bird Guide",
+            "description": "You have one chance to film a bird for up to [S5, M10, L15] minutes. The seekers must then film a bird for the same amount of time or longer.",
+            "cost": "Film a bird."
+        },
+        {
+            "name": "Curse Of Spotty Memory",
+            "description": "One random category of questions is disabled at all times. After this curse is played, roll a die to select the category. It remains disabled until the next question is asked.",
+            "cost": "Discard a time bonus card."
+        },
+        {
+            "name": "Curse Of The Lemon Phylactery",
+            "description": "Before asking another question, each seeker must find a lemon and affix it to their outermost clothing. If any lemon is lost, you are awarded [S30, M45, L60] minutes. Cannot be played during endgame.",
+            "cost": "Discard a powerup card."
+        },
+        {
+            "name": "Curse Of The Drained Brain",
+            "description": "Choose three questions in different categories. The seekers cannot ask those questions for the rest of the run.",
+            "cost": "Discard your hand."
+        },
+        {
+            "name": "Curse Of The Ransom Note",
+            "description": "The next question seekers ask must be composed using cut-out letters and words from printed material. It must include at least 5 words and be coherent.",
+            "cost": "Spell out \"Ransom Note\" as a ransom note (without using this card)."
+        },
+        {
+            "name": "Curse Of The Gambler's Feet",
+            "description": "For the next [S20, M40, L60] minutes, seekers must roll a die before taking any steps. They may take only that number of steps before rolling again.",
+            "cost": "Roll a die. If it's an even number this curse has no effect."
+        }
+    ]}
 ]

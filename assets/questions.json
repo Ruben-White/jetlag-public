@@ -1,5 +1,5 @@
 [
-    {"name": "Matching", "icon": "question-matching.svg", "color": "#EB3538", "cost": "Draw 3, Pick 1", "questions": [
+    {"name": "Matching", "icon": "question-matching.svg", "color": "#5665EB", "cost": "Draw 3, Pick 1", "questions": [
         {"name": "Matching Suburb", "icon": "question-suburb.svg", "description": "Is your nearest suburb the same as mine?"},
         {"name": "Matching Water Body", "icon": "question-water-body.svg", "description": "Is your nearest large water body (Oude Maas, Nieuwe Maas, Kralingse Plas, Bergse Voorplas) the same as mine?"},
         {"name": "Matching A-Road", "icon": "question-a-road.svg", "description": "Is the nearest A-road (A20, A15, A4, A16, etc.) the same as mine?"},
@@ -12,26 +12,26 @@
         {"name": "Matching Museum", "icon": "question-museum.svg", "description": "Is the nearest museum the same as mine?"},
         {"name": "Matching Cinema", "icon": "question-cinema.svg", "description": "Is the nearest cinema the same as mine?"}
     ]},
-    {"name": "Measuring", "icon": "question-measuring.svg", "color": "#4046E8", "cost": "Draw 3, Pick 1", "questions": [
+    {"name": "Measuring", "icon": "question-measuring.svg", "color": "#4FB26D", "cost": "Draw 3, Pick 1", "questions": [
         {"name": "Measuring Church", "icon": "question-church.svg", "description": "Compared to me, are you closer to or further from a church?"},
         {"name": "Measuring Supermarket", "icon": "question-supermarket.svg", "description": "Compared to me, are you closer to or further from a supermarket?"},
         {"name": "Measuring School", "icon": "question-school.svg", "description": "Compared to me, are you closer to or further from a school?"},
         {"name": "Measuring Museum", "icon": "question-museum.svg", "description": "Compared to me, are you closer to or further from a museum?"},
         {"name": "Measuring Cinema", "icon": "question-cinema.svg", "description": "Compared to me, are you closer to or further from a cinema?"}
     ]},
-    {"name": "Thermometer", "icon": "question-thermometer.svg", "color": "#EB8538", "cost": "Draw 2, Pick 1", "questions": [
+    {"name": "Thermometer", "icon": "question-thermometer.svg", "color": "#FFD447", "cost": "Draw 2, Pick 1", "questions": [
         {"name": "Thermometer 2 km", "icon": "question-thermometer-2-km.svg", "description": " I am going to travel (at least) 2 km. After that, am I closer to or further from you?"},
         {"name": "Thermometer 1 km", "icon": "question-thermometer-1-km.svg", "description": " I am going to travel (at least) 1 km. After that, am I closer to or further from you?"},
         {"name": "Thermometer 500 m", "icon": "question-thermometer-500-m.svg", "description": " I am going to travel (at least) 500 m. After that, am I closer to or further from you?"}
     ]},
-    {"name": "Radar", "icon": "question-radar.svg", "color": "#479A5C", "cost": "Draw 2, Pick 1", "questions": [
+    {"name": "Radar", "icon": "question-radar.svg", "color": "#E47A3E", "cost": "Draw 2, Pick 1", "questions": [
         {"name": "Radar 2 km", "icon": "question-radar-2-km.svg", "description": "Are you within a 2 km radius of me?"},
         {"name": "Radar 1 km", "icon": "question-radar-1-km.svg", "description": "Are you within a 1 km radius of me?"},
         {"name": "Radar 500 m", "icon": "question-radar-500-m.svg", "description": "Are you within a 500 m radius of me?"},
         {"name": "Radar 250 m", "icon": "question-radar-250-m.svg", "description": "Are you within a 250 m radius of me?"},
         {"name": "Radar 100 m", "icon": "question-radar-100-m.svg", "description": "Are you within a 100 m radius of me?"}
     ]},
-    {"name": "Photo", "icon": "question-photo.svg", "color": "#9938EB", "cost": "Draw 1", "questions": [
+    {"name": "Photo", "icon": "question-photo.svg", "color": "#D63333", "cost": "Draw 1", "questions": [
         {"name": "Photo High Building", "icon": "question-high-building.svg", "description": "Send a photo of the highest building you can see."},
         {"name": "Photo Water Body", "icon": "question-water-body.svg", "description": "Send a photo of the largest water body you can see."},
         {"name": "Photo Church", "icon": "question-church.svg", "description": "Send a photo of a church."},
