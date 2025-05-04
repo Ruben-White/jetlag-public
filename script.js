@@ -453,6 +453,8 @@ function initialiseQuestions() {
                     questionBlock.classList.add('question-block');
                     questionBlock.style.backgroundColor = category.color;
                     questionBlock.dataset.asked = 'false'; // Add asked attribute
+                    questionBlock.dataset.doubleCost = category.double_cost; // Add double cost
+                    questionBlock.dataset.cost = category.cost; // Add initial cost
 
                     const questionIcon = document.createElement('img');
                     questionIcon.src = `./icons/${question.icon}`;
@@ -462,9 +464,10 @@ function initialiseQuestions() {
                     questionsGrid.appendChild(questionBlock);
 
                     questionBlock.addEventListener('click', () => {
-                        if (questionBlock.dataset.asked === 'false') {
-                            showQuestionPopup(question.name, question.description, questionBlock, category.cost);
-                        }
+                        const currentCost = questionBlock.dataset.asked === 'false' 
+                            ? questionBlock.dataset.cost 
+                            : questionBlock.dataset.doubleCost;
+                        showQuestionPopup(question.name, question.description, questionBlock, currentCost);
                     });
                 });
 
@@ -474,17 +477,23 @@ function initialiseQuestions() {
 }
 
 function showQuestionPopup(name, description, questionBlock, cost) {
-    const bodyContent = `<p>${description}</p><p><strong>Asking Cost: ${cost}.</p></strong>`;
+    const bodyContent = `<p>${description}</p><p><strong>Asking Cost: ${cost}.</strong></p>`;
     const { popup, overlay } = createPopup(name, bodyContent, [
         {
             text: 'Ask',
             onClick: () => {
-                // Copy question name, description and cost to clipboard
-                const clipboardContent = `*${name}*\n${description}\n\n Asking Cost: ${cost}. \n Coordinates: [latitude, longitude].`;
+                // Copy question name, description, and cost to clipboard
+                const clipboardContent = `*${name}*\n${description}\n\n Asking Cost: ${cost}`;
 
                 navigator.clipboard.writeText(clipboardContent).then(() => {
-                    questionBlock.dataset.asked = 'true'; // Mark question as asked
-                    questionBlock.style.opacity = '0.5'; // Dim the question block
+                    if (questionBlock.dataset.asked === 'false') {
+                        questionBlock.dataset.asked = 'true'; // Mark question as asked
+                        questionBlock.style.opacity = '0.5'; // Dim the question block
+                        questionBlock.dataset.cost = cost; // Store the current cost
+                    } else {
+                        const doubleCost = questionBlock.dataset.doubleCost; // Use double cost
+                        questionBlock.dataset.cost = doubleCost; // Update the cost
+                    }
                     document.body.removeChild(popup);
                     document.body.removeChild(overlay);
                 });
@@ -622,12 +631,14 @@ function showCursePopup(curseElement) {
     const name = curseElement.dataset.name;
     const description = curseElement.dataset.description;
     const cost = curseElement.dataset.cost;
-    const bodyContent = `<p>${description}</p><p><strong>${cost}</strong></p>`;
+    const costContent = cost ? `<p><strong>Casting Cost: ${cost}.</strong></p>` : '';
+    const clipboardCost = cost ? `\n\n Casting Cost: ${cost}.` : '';
+    const bodyContent = `<p>${description}</p>${costContent}`;
     const { popup, overlay } = createPopup(name, bodyContent, [
         {
             text: 'Cast',
             onClick: () => {
-                const clipboardContent = `*${name}*\n${description}\n\n Casting Cost: ${cost}.`;
+                const clipboardContent = `*${name}*\n${description}${clipboardCost}`;
                 navigator.clipboard.writeText(clipboardContent).then(() => {
                     curseElement.remove();
                     document.body.removeChild(popup);

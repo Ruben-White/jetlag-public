@@ -69,27 +69,27 @@
         {
             "name": "Curse of The Zoologist",
             "description": "Take a photo of a wild fish, bird, mammal, reptile, amphibian, or bug. The seeker must take a picture of a wild animal in the same category before asking another question.",
-            "cost": "A photo of an animal."
+            "cost": "A photo of an animal"
         },
         {
             "name": "Curse Of The Unguided Tourist",
             "description": "Send the seekers an unzoomed Google Street View image from a street within 500 feet of where they are now. The shot has to be parallel to the horizon and include at least one human-built structure other than a road. Without using the internet for research, they must find what you sent them in real life before they can use transportation or ask another question. They must send a picture to the hider for verification.",
-            "cost": "Seeker must be outside."
+            "cost": "Seeker must be outside"
         },
         {
             "name": "Curse Of The Endless Tumble",
             "description": "Seekers must roll a die at least 100 feet and have it land on a 5 or a 6 before they can ask another question. The die must roll the full distance, unaided, using only the momentum from the initial throw and gravity. If the seekers accidentally hit someone with the die, the hider is awarded a [S10, M20, L30] minute bonus.",
-            "cost": "Roll a die. If it's 5 or 6 this card has no effect."
+            "cost": "Roll a die. If it's 5 or 6 this card has no effect"
         },
         {
             "name": "Curse Of The Hidden Hangman",
             "description": "Before asking another question or boarding another form of transportation, seekers must be the hider in a game of Hamna.",
-            "cost": "Discard 2 cards."
+            "cost": "Discard 2 cards"
         },
         {
             "name": "Curse Of The Overflowing Chalice",
             "description": "For the next three questions, you may draw (not keep) an additional card when drawing from the hider deck.",
-            "cost": "Discard a card."
+            "cost": "Discard a card"
         },
         {
             "name": "Curse Of The Mediocre Travel Agent",
@@ -99,7 +99,7 @@
         {
             "name": "Curse Of The Luxury Car",
             "description": "Take a photo of a car. The seekers must take a photo of a more expensive car before asking another question.",
-            "cost": "A photo of a car."
+            "cost": "A photo of a car"
         },
         {
             "name": "Curse Of The U-Turn",
@@ -109,7 +109,7 @@
         {
             "name": "Curse Of The Bridge Troll",
             "description": "The seekers must ask their next question from under a bridge.",
-            "cost": "Seekers must be at least [S1, M5, L30] miles from you."
+            "cost": "Seekers must be at least [S1, M5, L30] miles from you"
         },
         {
             "name": "Curse Of Water Weight",
@@ -119,72 +119,72 @@
         {
             "name": "Curse Of The Jammed Door",
             "description": "For the next [S0.5, M1, L3] hours, whenever the seekers want to pass through a doorway into a building, business, train, or other vehicle, they must roll 2 dice. If they do not roll a 7 or higher, they cannot enter. Each doorway can be reattempted after [S5, M10, L15] minutes.",
-            "cost": "Discard 2 cards."
+            "cost": "Discard 2 cards"
         },
         {
             "name": "Curse Of The Cairn",
             "description": "You have one attempt to stack as many rocks on top of each other as possible in a freestanding tower. Each rock may touch only one other rock. If the tower falls, seekers must build one of equal height. Rocks must be found in nature and dispersed afterward.",
-            "cost": "Build a rock tower."
+            "cost": "Build a rock tower"
         },
         {
             "name": "Curse Of The Urban Explorer",
             "description": "For the rest of the run, seekers cannot ask questions while on transit or in a train station.",
-            "cost": "Discard 2 cards."
+            "cost": "Discard 2 cards"
         },
         {
             "name": "Curse Of The Impressionable Consumer",
             "description": "Seekers must enter and gain admission (if applicable) to a location or buy a product they saw in an advertisement at least 100 feet from the product/location itself.",
-            "cost": "The seekers' next question is free."
+            "cost": "The seekers' next question is free"
         },
         {
             "name": "Curse Of The Egg Partner",
             "description": "Seekers must acquire an egg before asking another question. The egg is now an official team member. If it is cracked or abandoned, the hider is awarded [S30, M45, L60] minutes. This curse cannot be played during the endgame.",
-            "cost": "Discard two cards."
+            "cost": "Discard two cards"
         },
         {
             "name": "Curse Of The Distant Cuisine",
             "description": "Find a restaurant that serves food from a specific foreign country. The seekers must find one that serves food from a country of equal or greater distance away.",
-            "cost": "You must be at the restaurant."
+            "cost": "You must be at the restaurant"
         },
         {
             "name": "Curse Of The Right Turn",
             "description": "For the next [S20, M40, L6] minutes, the seekers can only turn right at street intersections. If trapped, they must turn around.",
-            "cost": "Discard a card."
+            "cost": "Discard a card"
         },
         {
             "name": "Curse Of The Labyrinth",
             "description": "Spend up to [S10, M20, L30] minutes drawing a solvable maze and send a photo of it to the seekers. They must solve it before asking another question.",
-            "cost": "Draw a maze."
+            "cost": "Draw a maze"
         },
         {
             "name": "Curse Of The Bird Guide",
             "description": "You have one chance to film a bird for up to [S5, M10, L15] minutes. The seekers must then film a bird for the same amount of time or longer.",
-            "cost": "Film a bird."
+            "cost": "Film a bird"
         },
         {
             "name": "Curse Of Spotty Memory",
             "description": "One random category of questions is disabled at all times. After this curse is played, roll a die to select the category. It remains disabled until the next question is asked.",
-            "cost": "Discard a time bonus card."
+            "cost": "Discard a time bonus card"
         },
         {
             "name": "Curse Of The Lemon Phylactery",
             "description": "Before asking another question, each seeker must find a lemon and affix it to their outermost clothing. If any lemon is lost, you are awarded [S30, M45, L60] minutes. Cannot be played during endgame.",
-            "cost": "Discard a powerup card."
+            "cost": "Discard a powerup card"
         },
         {
             "name": "Curse Of The Drained Brain",
             "description": "Choose three questions in different categories. The seekers cannot ask those questions for the rest of the run.",
-            "cost": "Discard your hand."
+            "cost": "Discard your hand"
         },
         {
             "name": "Curse Of The Ransom Note",
             "description": "The next question seekers ask must be composed using cut-out letters and words from printed material. It must include at least 5 words and be coherent.",
-            "cost": "Spell out \"Ransom Note\" as a ransom note (without using this card)."
+            "cost": "Spell out \"Ransom Note\" as a ransom note (without using this card)"
         },
         {
             "name": "Curse Of The Gambler's Feet",
             "description": "For the next [S20, M40, L60] minutes, seekers must roll a die before taking any steps. They may take only that number of steps before rolling again.",
-            "cost": "Roll a die. If it's an even number this curse has no effect."
+            "cost": "Roll a die. If it's an even number this curse has no effect"
         }
     ]}
 ]

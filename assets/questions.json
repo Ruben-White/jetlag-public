@@ -1,44 +1,58 @@
 [
-    {"name": "Matching", "icon": "question-matching.svg", "color": "#5665EB", "cost": "Draw 3, Pick 1", "questions": [
+    {"name": "Matching", "icon": "question-matching.svg", "color": "#5665EB", "cost": "Draw 3, Pick 1", "double_cost": "Draw 6, Pick 2", "questions": [
         {"name": "Matching Suburb", "icon": "question-suburb.svg", "description": "Is your nearest suburb the same as mine?"},
-        {"name": "Matching Water Body", "icon": "question-water-body.svg", "description": "Is your nearest large water body (Oude Maas, Nieuwe Maas, Kralingse Plas, Bergse Voorplas) the same as mine?"},
-        {"name": "Matching A-Road", "icon": "question-a-road.svg", "description": "Is the nearest A-road (A20, A15, A4, A16, etc.) the same as mine?"},
-        {"name": "Matching Train Station", "icon": "question-train-station.svg", "description": "Is the nearest train station the same as mine?"},
-        {"name": "Matching Metro Station", "icon": "question-metro-station.svg", "description": "Is the nearest metro station the same as mine?"},
-        {"name": "Matching Tram Station", "icon": "question-tram-station.svg", "description": "Is the nearest tram station the same as mine?"},
-        {"name": "Matching Church", "icon": "question-church.svg", "description": "Is the nearest church the same as mine?"},
-        {"name": "Matching Supermarket", "icon": "question-supermarket.svg", "description": "Is the nearest supermarket the same as mine?"},
-        {"name": "Matching School", "icon": "question-school.svg", "description": "Is the nearest school the same as mine?"},
-        {"name": "Matching Museum", "icon": "question-museum.svg", "description": "Is the nearest museum the same as mine?"},
-        {"name": "Matching Cinema", "icon": "question-cinema.svg", "description": "Is the nearest cinema the same as mine?"}
+        {"name": "Matching Train Line", "icon": "question-train-line.svg", "description": "Is your nearest train station the same as mine?"},
+        {"name": "Matching Metro Line", "icon": "question-metro-line.svg", "description": "Is your nearest metro station the same as mine?"},
+        {"name": "Matching Tram Line", "icon": "question-tram-line.svg", "description": "Is your nearest tram station the same as mine?"},
+        {"name": "Matching A-Road", "icon": "question-a-road.svg", "description": "Is your nearest A-road (A20, A15, A4, A16, etc.) the same as mine?"},
+        {"name": "Matching Water Body", "icon": "question-water-body.svg", "description": "Is your nearest body of water (Oude Maas, Nieuwe Maas, Kralingse Plas, Bergse Voorplas) the same as mine?"},
+        {"name": "Matching Brdige", "icon": "question-bridge.svg", "description": "Is your nearest bridge the same as mine?"},
+        {"name": "Matching Park", "icon": "question-park.svg", "description": "Is your nearest park the same as mine?"},
+        {"name": "Matching Supermarket", "icon": "question-supermarket.svg", "description": "Is your nearest supermarket the same as mine?"},
+        {"name": "Matching Church", "icon": "question-church.svg", "description": "Is your nearest church the same as mine?"},
+        {"name": "Matching School", "icon": "question-school.svg", "description": "Is your nearest school the same as mine?"},
+        {"name": "Matching Museum", "icon": "question-museum.svg", "description": "Is your nearest museum the same as mine?"},
+        {"name": "Matching Cinema", "icon": "question-cinema.svg", "description": "Is your nearest cinema the same as mine?"},
+        {"name": "Matching Street/Path", "icon": "question-street-path.svg", "description": "Is your nearest street or path the same as mine?"}
     ]},
-    {"name": "Measuring", "icon": "question-measuring.svg", "color": "#4FB26D", "cost": "Draw 3, Pick 1", "questions": [
-        {"name": "Measuring Church", "icon": "question-church.svg", "description": "Compared to me, are you closer to or further from a church?"},
+    {"name": "Measuring", "icon": "question-measuring.svg", "color": "#4FB26D", "cost": "Draw 3, Pick 1", "double_cost": "Draw 6, Pick 2", "questions": [
+        {"name": "Measuring Suburb", "icon": "question-suburb.svg", "description": "Compared to me, are you closer to or further from a suburb border"},
+        {"name": "Measuring Train Line", "icon": "question-train-line.svg", "description": "Compared to me, are you closer to or further from a train line?"},
+        {"name": "Measuring Metro Line", "icon": "question-metro-line.svg", "description": "Compared to me, are you closer to or further from a metro line?"},
+        {"name": "Measuring Tram Line", "icon": "question-tram-line.svg", "description": "Compared to me, are you closer to or further from a tram line?"},
+        {"name": "Measuring A-Road", "icon": "question-a-road.svg", "description": "Compared to me, are you closer to or further from an A-road?"},
+        {"name": "Measuring Water Body", "icon": "question-water-body.svg", "description": "Compared to me, are you closer to or further from a body of water?"},
+        {"name": "Measuring Bridge", "icon": "question-bridge.svg", "description": "Compared to me, are you closer to or further from a bridge?"},
+        {"name": "Measuring Park", "icon": "question-park.svg", "description": "Compared to me, are you closer to or further from a park?"},
         {"name": "Measuring Supermarket", "icon": "question-supermarket.svg", "description": "Compared to me, are you closer to or further from a supermarket?"},
+        {"name": "Measuring Church", "icon": "question-church.svg", "description": "Compared to me, are you closer to or further from a church?"},
         {"name": "Measuring School", "icon": "question-school.svg", "description": "Compared to me, are you closer to or further from a school?"},
         {"name": "Measuring Museum", "icon": "question-museum.svg", "description": "Compared to me, are you closer to or further from a museum?"},
         {"name": "Measuring Cinema", "icon": "question-cinema.svg", "description": "Compared to me, are you closer to or further from a cinema?"}
     ]},
-    {"name": "Thermometer", "icon": "question-thermometer.svg", "color": "#FFD447", "cost": "Draw 2, Pick 1", "questions": [
+    {"name": "Thermometer", "icon": "question-thermometer.svg", "color": "#FFD447", "cost": "Draw 2, Pick 1", "double_cost": "Draw 4, Pick 2", "questions": [
         {"name": "Thermometer 2 km", "icon": "question-thermometer-2-km.svg", "description": " I am going to travel (at least) 2 km. After that, am I closer to or further from you?"},
         {"name": "Thermometer 1 km", "icon": "question-thermometer-1-km.svg", "description": " I am going to travel (at least) 1 km. After that, am I closer to or further from you?"},
         {"name": "Thermometer 500 m", "icon": "question-thermometer-500-m.svg", "description": " I am going to travel (at least) 500 m. After that, am I closer to or further from you?"}
     ]},
-    {"name": "Radar", "icon": "question-radar.svg", "color": "#E47A3E", "cost": "Draw 2, Pick 1", "questions": [
+    {"name": "Radar", "icon": "question-radar.svg", "color": "#E47A3E", "cost": "Draw 2, Pick 1", "double_cost": "Draw 4, Pick 2", "questions": [
         {"name": "Radar 2 km", "icon": "question-radar-2-km.svg", "description": "Are you within a 2 km radius of me?"},
         {"name": "Radar 1 km", "icon": "question-radar-1-km.svg", "description": "Are you within a 1 km radius of me?"},
         {"name": "Radar 500 m", "icon": "question-radar-500-m.svg", "description": "Are you within a 500 m radius of me?"},
         {"name": "Radar 250 m", "icon": "question-radar-250-m.svg", "description": "Are you within a 250 m radius of me?"},
         {"name": "Radar 100 m", "icon": "question-radar-100-m.svg", "description": "Are you within a 100 m radius of me?"}
     ]},
-    {"name": "Photo", "icon": "question-photo.svg", "color": "#D63333", "cost": "Draw 1", "questions": [
-        {"name": "Photo High Building", "icon": "question-high-building.svg", "description": "Send a photo of the highest building you can see."},
-        {"name": "Photo Water Body", "icon": "question-water-body.svg", "description": "Send a photo of the largest water body you can see."},
-        {"name": "Photo Church", "icon": "question-church.svg", "description": "Send a photo of a church."},
-        {"name": "Photo Supermarket", "icon": "question-supermarket.svg", "description": "Send a photo of a supermarket."},
-        {"name": "Photo School", "icon": "question-school.svg", "description": "Send a photo of a school."},
-        {"name": "Photo Museum", "icon": "question-museum.svg", "description": "Send a photo of a museum."},
-        {"name": "Photo Cinema", "icon": "question-cinema.svg", "description": "Send a photo of a cinema."},
-        {"name": "Photo Strava Route", "icon": "question-strava-route.svg", "description": "Send a strava route of at least 250 m with more than 5 corners."}
+    {"name": "Photo", "icon": "question-photo.svg", "color": "#D63333", "cost": "Draw 1", "double_cost": "Draw 2", "questions": [
+        {"name": "Photo Selfie", "icon": "question-selfie.svg", "description": "Send a photo of yourself. Must be taking in selfie mode, arm fully extended and parallel to the ground."},
+        {"name": "Photo Sky", "icon": "question-sky.svg", "description": "Send a photo of the sky. Place phone on ground and shoot directly up."},
+        {"name": "Photo Water Body", "icon": "question-water-body.svg", "description": "Send a photo of the nearest body of water. Must include both sides or horizon."},
+        {"name": "Photo Bridge", "icon": "question-bridge.svg", "description": "Send a photo of the nearest bridge. Must include two sides of the bridge."},
+        {"name": "Photo Park", "icon": "question-park.svg", "description": "Send a photo of the nearest park. Must be perpendicular to ground and taken 2 m away from any obstructions."},
+        {"name": "Photo Tree", "icon": "question-tree.svg", "description": "Send a photo of a tree. Must include the entire tree."},
+        {"name": "Photo Buildings", "icon": "question-buildings.svg", "description": "Send a photo of 3 buildings. Must include, bottom and up to four stories."},
+        {"name": "Photo Tallest structure", "icon": "question-structure.svg", "description": "Send a photo of the tallest structure you can see. Must include top and both sides, witht the top in the top 1/3rd of the photo."},
+        {"name": "Photo Shop", "icon": "question-shop.svg", "description": "Send a photo of the nearest shop. Must include the entire shop. You can remove any names and logos."},
+        {"name": "Photo Widest Street/Path", "icon": "question-street-path.svg", "description": "Send a photo of the widest street or path you can see. Must include both sides of the street."},
+        {"name": "Photo Route", "icon": "question-route.svg", "description": "Trace a route of at least 250 m with more than 5 corners. The route must follow streets or paths visible on maps. The trace should be oriented with North at the top of the screen."}
     ]}
 ]
