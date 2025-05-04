@@ -90,7 +90,7 @@ p {
 
 /* Tab Content */
 [data-tab-content] {
-  margin: 60px 0px 60px 0px;
+  margin: 60px 0px 80px 0px;
   display: none;
   flex: 1;
 }
@@ -307,6 +307,13 @@ p {
   font-weight: bold;
   color: black;
   text-transform: uppercase; /* Make curse names uppercase */
+}
+
+/* =====================================================================================================*/
+/* Map */
+#map-content {
+  display: flex;
+  flex-direction: column;
 }
 
 /* ====================================================================================================*/
