@@ -20,13 +20,13 @@ h1, h2, h3, h4, h5, h6 {
   padding: 0;
   font-weight: bold;
   text-transform: uppercase;
-  font-size: 300%;
+  font-size: 600%; /* Scaled x2 */
 }
 
 p {
   margin: 0;
   padding: 0;
-  font-size: 125%;
+  font-size: 250%; /* Scaled x2 */
 }
 
 /* ====================================================================================================*/
@@ -43,7 +43,7 @@ p {
 
 .tab {
   cursor: pointer;
-  padding: 10px;
+  padding: 20px; /* Scaled x2 */
   flex: 1 1;
   display: flex;
   flex-direction: column;
@@ -55,8 +55,8 @@ p {
 }
 
 .tab img {
-  width: 60px;
-  height: 60px;
+  width: 120px; /* Scaled x2 */
+  height: 120px; /* Scaled x2 */
 }
 
 /* Tab Header */
@@ -75,9 +75,9 @@ p {
 }
 
 .tab-header img {
-  width: 60px;
-  height: 60px;
-  margin-right: 20px;
+  width: 120px; /* Scaled x2 */
+  height: 120px; /* Scaled x2 */
+  margin-right: 40px; /* Scaled x2 */
 }
 
 [data-tab-header] {
@@ -90,7 +90,7 @@ p {
 
 /* Tab Content */
 [data-tab-content] {
-  margin: 60px 0px 80px 0px;
+  margin: 120px 0px 160px 0px; /* Scaled x2 */
   display: none;
   flex: 1;
 }
@@ -114,16 +114,16 @@ p {
 }
 
 .reset-button img {
-  width: 40px;
-  height: 40px;
+  width: 80px;
+  height: 80px;
 }
 
 /* ====================================================================================================*/
 /* Players */
 #hiders, #seekers {
-  padding: 0px 20px 100px 20px;
-  min-height: 60px;
-  margin: 20px 0;
+  padding: 0px 40px 200px 40px; /* Scaled x2 */
+  min-height: 120px; /* Scaled x2 */
+  margin: 40px 0; /* Scaled x2 */
 }
 
 #hiders ul, #seekers ul {
@@ -132,9 +132,9 @@ p {
 }
 
 #hiders h2 img, #seekers h2 img {
-  width: 40px;
-  height: 40px;
-  margin-right: 20px;
+  width: 80px; /* Scaled x2 */
+  height: 80px; /* Scaled x2 */
+  margin-right: 40px; /* Scaled x2 */
 }
 
 .player {
@@ -142,12 +142,13 @@ p {
   display: flex;
   justify-content: space-between;
   background-color: #eee;
-  margin: 10px 0;
+  margin: 20px 0; /* Scaled x2 */
   color: white;
-  padding: 10px;
-  border-radius: 10px;
+  padding: 10px; /* Scaled x2 */
+  border-radius: 20px;
   text-transform: uppercase;
-  font-size: 150%;
+  font-size: 400%; /* Scaled x2 */
+  font-weight: bold;
 }
 
 .player-left, .player-right {
@@ -161,24 +162,24 @@ p {
 }
 
 .player-icon {
-  width: 40px;
-  height: 40px;
-  margin-right: 10px;
+  width: 80px; /* Scaled x2 */
+  height: 80px; /* Scaled x2 */
+  margin: 20px; /* Scaled x2 */
 }
 
 .time {
   font-family: 'Jet Brains Mono', monospace;
-  font-size: 150%;
+  font-size: 100%; /* Scaled x2 */
 }
 
 .add-time-button {
   cursor: pointer;
   background-color: transparent;
   border: none;
-  width: 40px;
-  height: 40px;
+  width: 80px; /* Scaled x2 */
+  height: 80px; /* Scaled x2 */
   padding: 0;
-  margin-left: 10px;
+  margin: 20px; /* Scaled x2 */
 }
 
 .add-time-button img {
@@ -191,24 +192,24 @@ p {
 #questions-content {
   display: flex;
   flex-direction: column;
-  padding: 0px 20px 100px 20px;
+  padding: 0px 40px 200px 40px; /* Scaled x2 */
 }
 
 .question-category {
   display: flex;
   align-items: center;
-  margin: 20px 0;
+  margin: 40px 0; /* Scaled x2 */
 }
 
 .question-category img {
-  width: 40px;
-  height: 40px;
-  margin-right: 20px;
+  width: 80px; /* Scaled x2 */
+  height: 80px; /* Scaled x2 */
+  margin-right: 40px; /* Scaled x2 */
 }
 
 .question-cost {
   margin-left: auto;
-  font-size: 28px;
+  font-size: 56px; /* Scaled x2 */
   color: #666;
   text-transform: uppercase;
   font-style: italic;
@@ -217,8 +218,8 @@ p {
 
 .questions-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
-  gap: 10px;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: 20px; /* Scaled x2 */
 }
 
 .question-block {
@@ -226,15 +227,16 @@ p {
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 20px;
-  border-radius: 10px;
+  padding: 40px; /* Scaled x2 */
+  border-radius: 20px;
   text-align: center;
   color: white;
+  font-size: 100%; /* Adjusted to match button text size */
 }
 
 .question-block img {
-  width: 120px;
-  height: 120px;
+  width: 240px; /* Scaled x2 */
+  height: 240px; /* Scaled x2 */
   margin-bottom: 0;
 }
 
@@ -243,19 +245,19 @@ p {
 #curses-content {
   display: flex;
   flex-direction: column;
-  padding: 20px 20px 100px 20px;
+  padding: 40px 40px 200px 40px; /* Scaled x2 */
 }
 
 .curse-category {
   display: flex;
   align-items: center;
-  margin: 20px 0;
+  margin: 40px 0; /* Scaled x2 */
 }
 
 .curse-category img {
-  width: 40px;
-  height: 40px;
-  margin-right: 20px;
+  width: 80px; /* Scaled x2 */
+  height: 80px; /* Scaled x2 */
+  margin-right: 40px; /* Scaled x2 */
 }
 
 .hand-section {
@@ -265,17 +267,17 @@ p {
 }
 
 .hand-section img {
-  width: 40px;
-  height: 40px; 
-  margin-right: 20px;
+  width: 80px; /* Scaled x2 */
+  height: 80px; /* Scaled x2 */
+  margin-right: 40px; /* Scaled x2 */
 }
 
 .draw-curses-button {
   cursor: pointer;
   background-color: transparent;
   border: none;
-  width: 40px;
-  height: 40px;
+  width: 80px; /* Scaled x2 */
+  height: 80px; /* Scaled x2 */
   padding: 0;
 }
 
@@ -287,20 +289,20 @@ p {
 .curses-grid {
   display: grid;
   grid-template-columns: 1fr;
-  gap: 10px;
-  margin-top: 20px;
+  gap: 20px; /* Scaled x2 */
+  margin-top: 40px; /* Scaled x2 */
 }
 
 .curse {
   cursor: pointer;
   display: flex;
   flex-direction: column;
-  padding: 20px;
-  border-radius: 10px;
+  padding: 40px; /* Scaled x2 */
+  border-radius: 20px;
   text-align: center;
   color: white;
   background-color: #aaa;
-  font-size: 150%;
+  font-size: 300%; /* Adjusted to match button text size */
 }
 
 .curse-name {
@@ -325,12 +327,14 @@ p {
   transform: translate(-50%, -50%);
   z-index: 1000;
   background-color: white;
-  padding: 40px;
+  padding: 80px; /* Scaled x2 */
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
-  border-radius: 20px;
+  border-radius: 40px; /* Scaled x2 */
   display: flex;
   flex-direction: column;
   align-items: center;
+  text-align: center; /* Ensure consistent alignment */
+  font-size: 150%; /* Unified font size for all pop-ups */
 }
 
 .popup-content {
@@ -340,19 +344,19 @@ p {
 }
 
 .popup-content p {
+  font-size: 200%; /* Unified paragraph size for all pop-ups */
   text-align: center;
-  margin: 10px 0;
-  font-size: 125%;
+  margin: 20px 0; /* Consistent spacing */
 }
 
 .popup-content input {
-  padding: 20px;
+  padding: 40px; /* Scaled x2 */
   text-align: center;
-  margin: 10px 10px;
-  border: 4px solid black;
-  border-radius: 10px;
+  margin: 20px 20px; /* Scaled x2 */
+  border: 8px solid black; /* Scaled x2 */
+  border-radius: 20px; /* Scaled x2 */
   font-family: 'Jet Brains Mono', monospace;
-  font-size: 125%;
+  font-size: 250%; /* Scaled x2 */
 }
 
 .popup-content .button-container {
@@ -366,21 +370,46 @@ p {
   cursor: pointer;
   background-color: #aaa;
   border: none;
-  padding: 20px 40px;
-  margin: 0 10px;
-  border-radius: 10px;
+  padding: 40px 80px; /* Scaled x2 */
+  margin: 0 20px; /* Scaled x2 */
+  border-radius: 20px; /* Scaled x2 */
   flex: 1;
   width: 200px;
   text-align: center;
   font-family: 'Rubik', sans-serif;
   font-weight: bold;
   text-transform: uppercase;
-  font-size: 150%;
+  font-size: 300%; /* Scaled x2 */
 }
 
 .popup-content h2 {
   text-align: center;
   width: 100%;
+  font-size: 400%; /* Unified header size */
+  font-weight: bold;
+  text-transform: uppercase;
+  margin-bottom: 20px; /* Consistent spacing */
+}
+
+.popup-content input {
+  font-size: 200%; /* Unified input font size */
+  font-family: 'Jet Brains Mono', monospace;
+  padding: 20px; /* Consistent padding */
+  text-align: center;
+  margin: 20px 0; /* Consistent spacing */
+  border: 4px solid black; /* Unified border size */
+  border-radius: 10px; /* Unified border radius */
+}
+
+.popup-content button {
+  font-size: 200%; /* Unified button font size */
+  font-family: 'Rubik', sans-serif;
+  font-weight: bold;
+  text-transform: uppercase;
+  padding: 20px 40px; /* Consistent padding */
+  margin: 0 10px; /* Consistent spacing */
+  border-radius: 10px; /* Unified border radius */
+  cursor: pointer;
 }
 
 .overlay {
@@ -412,13 +441,13 @@ p {
 }
 
 #splash-screen img {
-  width: 400px;
+  width: 800px; /* Scaled x2 */
   height: auto;
 }
 
 #splash-screen h1 {
-  margin-top: 20px;
-  font-size: 300%;
+  margin-top: 40px; /* Scaled x2 */
+  font-size: 600%; /* Scaled x2 */
   font-weight: bold;
   text-transform: uppercase;
 }

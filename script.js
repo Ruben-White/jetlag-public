@@ -140,7 +140,7 @@ function initialiseTabs() {
     });
 }
 
-function createPopup(headerText, bodyContent, buttons) {
+function createPopup(headerText, bodyContent, buttons, inputPlaceholder = null) {
     const overlay = document.createElement('div');
     overlay.classList.add('overlay');
     document.body.appendChild(overlay);
@@ -152,12 +152,21 @@ function createPopup(headerText, bodyContent, buttons) {
     popupContent.classList.add('popup-content');
 
     const popupHeader = document.createElement('h2');
-    popupHeader.textContent = headerText;
+    popupHeader.textContent = headerText; // Unified header usage
     popupContent.appendChild(popupHeader);
 
     const popupText = document.createElement('p');
-    popupText.innerHTML = bodyContent;
+    popupText.innerHTML = bodyContent; // Unified paragraph usage
     popupContent.appendChild(popupText);
+
+    if (inputPlaceholder) {
+        const input = document.createElement('input');
+        input.type = 'number';
+        input.min = '0';
+        input.placeholder = inputPlaceholder;
+        input.classList.add('popup-input'); // Unified input styling
+        popupContent.appendChild(input);
+    }
 
     const buttonContainer = document.createElement('div');
     buttonContainer.classList.add('button-container');
@@ -213,13 +222,13 @@ function showAddTimePopup(playerElement) {
     const playerName = playerElement.querySelector('.player-name').textContent;
     let capitalisedName = playerName.charAt(0).toUpperCase() + playerName.slice(1);
     capitalisedName = capitalisedName + (capitalisedName.endsWith('s') ? "'" : "'s");
-    const bodyContent = "Adjust <strong>" + capitalisedName + "</strong> time by adding or subtracting seconds.";
+    const bodyContent = `Adjust <strong>${capitalisedName}</strong> time by adding or subtracting seconds.`;
 
     const { popup, overlay } = createPopup('Add Time', bodyContent, [
         {
             text: 'Apply',
             onClick: () => {
-                const timeInput = popup.querySelector('input[type="number"]');
+                const timeInput = popup.querySelector('.popup-input');
                 const seconds = parseInt(timeInput.value);
                 if (!isNaN(seconds)) {
                     addTime(playerElement, seconds);
@@ -235,13 +244,7 @@ function showAddTimePopup(playerElement) {
                 document.body.removeChild(overlay);
             }
         }
-    ]);
-
-    const timeInput = document.createElement('input');
-    timeInput.type = 'number';
-    timeInput.min = '0';
-    timeInput.placeholder = 'Number of seconds';
-    popup.querySelector('.popup-content').insertBefore(timeInput, popup.querySelector('.button-container'));
+    ], 'Number of seconds');
 }
 
 function selectTab(tabId) {
@@ -477,22 +480,16 @@ function initialiseQuestions() {
 }
 
 function showQuestionPopup(name, description, questionBlock, cost) {
-    const bodyContent = `<p>${description}</p><p><strong>Asking Cost: ${cost}.</strong></p>`;
+    const bodyContent = `${description}<br><strong>Asking Cost: ${cost}.</strong>`; // Simplified content
     const { popup, overlay } = createPopup(name, bodyContent, [
         {
             text: 'Ask',
             onClick: () => {
-                // Copy question name, description, and cost to clipboard
-                const clipboardContent = `*${name}*\n${description}\n\n Asking Cost: ${cost}`;
-
+                const clipboardContent = `*${name}*\n${description}\n\nAsking Cost: ${cost}`;
                 navigator.clipboard.writeText(clipboardContent).then(() => {
                     if (questionBlock.dataset.asked === 'false') {
-                        questionBlock.dataset.asked = 'true'; // Mark question as asked
-                        questionBlock.style.opacity = '0.5'; // Dim the question block
-                        questionBlock.dataset.cost = cost; // Store the current cost
-                    } else {
-                        const doubleCost = questionBlock.dataset.doubleCost; // Use double cost
-                        questionBlock.dataset.cost = doubleCost; // Update the cost
+                        questionBlock.dataset.asked = 'true';
+                        questionBlock.style.opacity = '0.5';
                     }
                     document.body.removeChild(popup);
                     document.body.removeChild(overlay);
@@ -570,7 +567,7 @@ function showDrawCursesPopup() {
         {
             text: 'Draw',
             onClick: () => {
-                const cursesInput = popup.querySelector('input[type="number"]');
+                const cursesInput = popup.querySelector('.popup-input');
                 const count = parseInt(cursesInput.value);
                 if (!isNaN(count) && count > 0) {
                     drawCurses(count, popup, overlay);
@@ -584,13 +581,7 @@ function showDrawCursesPopup() {
                 document.body.removeChild(overlay);
             }
         }
-    ]);
-
-    const cursesInput = document.createElement('input');
-    cursesInput.type = 'number';
-    cursesInput.min = '1';
-    cursesInput.placeholder = 'Number of curses';
-    popup.querySelector('.popup-content').insertBefore(cursesInput, popup.querySelector('.button-container'));
+    ], 'Number of curses');
 }
 
 function drawCurses(count, popup, overlay) {
@@ -631,14 +622,13 @@ function showCursePopup(curseElement) {
     const name = curseElement.dataset.name;
     const description = curseElement.dataset.description;
     const cost = curseElement.dataset.cost;
-    const costContent = cost ? `<p><strong>Casting Cost: ${cost}.</strong></p>` : '';
-    const clipboardCost = cost ? `\n\n Casting Cost: ${cost}.` : '';
-    const bodyContent = `<p>${description}</p>${costContent}`;
+    const costContent = cost ? `<br><strong>Casting Cost: ${cost}.</strong>` : '';
+    const bodyContent = `${description}${costContent}`; // Simplified content
     const { popup, overlay } = createPopup(name, bodyContent, [
         {
             text: 'Cast',
             onClick: () => {
-                const clipboardContent = `*${name}*\n${description}${clipboardCost}`;
+                const clipboardContent = `*${name}*\n${description}${cost ? `\n\nCasting Cost: ${cost}` : ''}`;
                 navigator.clipboard.writeText(clipboardContent).then(() => {
                     curseElement.remove();
                     document.body.removeChild(popup);
