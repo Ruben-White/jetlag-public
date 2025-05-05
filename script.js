@@ -439,13 +439,8 @@ function initialiseQuestions() {
                 const categoryHeader = document.createElement('h2');
                 categoryHeader.textContent = category.name;
 
-                const categoryCost = document.createElement('span');
-                categoryCost.classList.add('question-cost');
-                categoryCost.textContent = category.cost;
-
                 categoryElement.appendChild(categoryIcon);
                 categoryElement.appendChild(categoryHeader);
-                categoryElement.appendChild(categoryCost);
                 questionsContent.appendChild(categoryElement);
 
                 const questionsGrid = document.createElement('div');

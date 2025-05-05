@@ -116,6 +116,7 @@ p {
 .reset-button img {
   width: 80px;
   height: 80px;
+  margin: 0px 20px; /* Scaled x2 */
 }
 
 /* ====================================================================================================*/
@@ -208,17 +209,12 @@ p {
 }
 
 .question-cost {
-  margin-left: auto;
-  font-size: 56px; /* Scaled x2 */
-  color: #666;
-  text-transform: uppercase;
-  font-style: italic;
-  font-weight: bold;
+  display: none; /* Hide the question cost */
 }
 
 .questions-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
   gap: 20px; /* Scaled x2 */
 }
 
@@ -235,8 +231,8 @@ p {
 }
 
 .question-block img {
-  width: 300px; /* Scaled x2 */
-  height: 300px; /* Scaled x2 */
+  width: 250px; /* Scaled x2 */
+  height: 250px; /* Scaled x2 */
   margin-bottom: 0;
 }
 
@@ -327,14 +323,13 @@ p {
   transform: translate(-50%, -50%);
   z-index: 1000;
   background-color: white;
-  padding: 80px; /* Scaled x2 */
+  padding: 40px; /* Scaled x2 */
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
   border-radius: 40px; /* Scaled x2 */
-  display: flex;
-  flex-direction: column;
   align-items: center;
   text-align: center; /* Ensure consistent alignment */
   font-size: 150%; /* Unified font size for all pop-ups */
+  width: 80%;
 }
 
 .popup-content {
@@ -385,7 +380,7 @@ p {
 .popup-content h2 {
   text-align: center;
   width: 100%;
-  font-size: 400%; /* Unified header size */
+  font-size: 300%; /* Unified header size */
   font-weight: bold;
   text-transform: uppercase;
   margin-bottom: 20px; /* Consistent spacing */
