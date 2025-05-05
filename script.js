@@ -520,12 +520,12 @@ function initialiseCurses() {
     
     // Add icon to hand header
     const handIcon = document.createElement('img');
-    handIcon.src = './icons/curse-castable-curses.svg';
+    handIcon.src = './icons/curse-castable.svg';
     handIcon.alt = 'Curses icon';
     handIcon.classList.add('header-icon');
     handHeader.appendChild(handIcon);
     
-    handHeader.appendChild(document.createTextNode('Castable Curses'));
+    handHeader.appendChild(document.createTextNode('Castable'));
 
     const drawButton = document.createElement('button');
     drawButton.classList.add('draw-curses-button');
